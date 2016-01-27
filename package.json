@@ -1,0 +1,19 @@
+{
+  "name": "teach-angularjs",
+  "version": "0.1.0",
+  "description": "a simple demo project to teach basic of Angular Js",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "AngularJs",
+    "basic"
+  ],
+  "author": "Wenjie Chen",
+  "license": "MIT"
+}

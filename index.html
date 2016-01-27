@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+
+</head>
+
+<body ng-app="app">
+
+<div ng-controller="mainController" ng-init="init()">
+    <button class="btn btn-primary btn-sm" style="margin-right: 10px;" ng-repeat="button in buttons" ng-click="chooseButton(button)">{{button.description}}</button>
+
+    <form>
+        <div class="form-group">
+            <label>{{button.selected.description}}</label>
+            <input type="{{button.selected.type}}" class="form-control" placeholder="{{button.selected.description}}" ng-model="button.selected.value">
+        </div>
+    </form>
+</div>
+
+
+<script src="js/app.js"></script>
+<script src="js/controller/mainController.js"></script>
+</body>
+</html>

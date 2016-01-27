@@ -1,0 +1,27 @@
+{
+  "name": "teach-angularjs",
+  "description": "a simple demo project to teach basic of Angular Js",
+  "main": "app.js",
+  "authors": [
+    "Wenjie Chen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AngularJs",
+    "basic"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-ui-router": "^0.2.17",
+    "bootstrap": "^3.3.6"
+  }
+}
