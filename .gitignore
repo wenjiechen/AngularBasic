@@ -1,0 +1,4 @@
+.bowerrc
+.idea
+bower_components
+node_modules

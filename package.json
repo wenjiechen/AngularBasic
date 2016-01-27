@@ -15,5 +15,8 @@
     "basic"
   ],
   "author": "Wenjie Chen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
