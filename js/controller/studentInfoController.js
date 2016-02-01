@@ -31,7 +31,7 @@
             $scope.student.selected = student;
         };
 
-        $scope.delete = function (student) {
+        $scope.remove = function (student) {
             var index = $scope.students.indexOf(student);
             if (index != -1) {
                 $scope.students.splice(index, 1);
