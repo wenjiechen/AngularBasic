@@ -7,8 +7,9 @@
             <th> Grade</th>
             <th> Address</th>
         </tr>
-        <tr ng-repeat="student in students | filter:searchText.value" ng-class="{'striped': $even}">
+        <tr ng-repeat="student in students | filter:searchText.value" ng-class="{'striped': $even}" ng-click="edit(student)">
             <td ng-repeat="prop in student">{{prop}}</td>
+            <td> <button class="btn btn-danger btn-sm" ng-click="delete(student)">Delete</button></td>
         </tr>
         </thead>
     </table>
