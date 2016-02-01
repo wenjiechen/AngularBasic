@@ -1,0 +1,15 @@
+<div class="row" style="padding: 20px;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Grade</th>
+            <th> Address</th>
+        </tr>
+        <tr ng-repeat="student in students | filter:searchText.value" ng-class="{'striped': $even}">
+            <td ng-repeat="prop in student">{{prop}}</td>
+        </tr>
+        </thead>
+    </table>
+</div>

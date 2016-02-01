@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Angular Demo</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
@@ -12,19 +13,19 @@
 
 <body ng-app="app">
 
-<div ng-controller="mainController" ng-init="init()">
-    <button class="btn btn-primary btn-sm" style="margin-right: 10px;" ng-repeat="button in buttons" ng-click="chooseButton(button)">{{button.description}}</button>
+<div ng-controller="studentInfoController" ng-init="init()">
 
-    <form>
-        <div class="form-group">
-            <label>{{button.selected.description}}</label>
-            <input type="{{button.selected.type}}" class="form-control" placeholder="{{button.selected.description}}" ng-model="button.selected.value">
-        </div>
-    </form>
+    <div class="row" style="padding: 20px;">
+        <button class="btn btn-info btn-sm" ng-click="view1()">{{"add student" | uppercase}}</button>
+        <button class="btn btn-info btn-sm" ng-click="view2()">{{"search student" | uppercase}}</button>
+    </div>
+
+ <ng-include src="viewUrl" ></ng-include>
+
 </div>
 
 
 <script src="js/app.js"></script>
-<script src="js/controller/mainController.js"></script>
+<script src="js/controller/studentInfoController.js"></script>
 </body>
 </html>
