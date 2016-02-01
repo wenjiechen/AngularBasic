@@ -14,10 +14,12 @@
 
         $scope.init = function () {
             $scope.students = [
-                new student(001, 'Jack hu', 'A', 'new york city'),
-                new student(002, 'mike xu', 'A', 'london'),
-                new student(003, 'mia he', 'B', 'SF'),
-                new student(004, 'John hu', 'B', 'SF')
+                new student(1, 'Jack hu', 'A', 'new york city'),
+                new student(2, 'mike xu', 'A', 'london'),
+                new student(3, 'Jack wu', 'A', 'new york city'),
+                new student(4, 'mike sui', 'A', 'london'),
+                new student(5, 'mia he', 'B', 'SF'),
+                new student(6, 'John hu', 'B', 'SF')
             ];
 
             $scope.student = {selected: new student()};

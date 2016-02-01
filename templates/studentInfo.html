@@ -1,0 +1,10 @@
+<div ng-controller="studentInfoController" ng-init="init()">
+
+    <div class="row" style="padding: 20px;">
+        <button class="btn btn-info btn-sm" ng-click="view2()">{{"search student" | uppercase}}</button>
+        <button class="btn btn-info btn-sm" ng-click="view1()">{{"add student" | uppercase}}</button>
+    </div>
+
+    <ng-include src="viewUrl"></ng-include>
+
+</div>

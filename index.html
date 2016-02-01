@@ -8,22 +8,12 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 </head>
 
 <body ng-app="app">
 
-<div ng-controller="studentInfoController" ng-init="init()">
-
-    <div class="row" style="padding: 20px;">
-        <button class="btn btn-info btn-sm" ng-click="view2()">{{"search student" | uppercase}}</button>
-        <button class="btn btn-info btn-sm" ng-click="view1()">{{"add student" | uppercase}}</button>
-    </div>
-
-    <ng-include src="viewUrl"></ng-include>
-
-</div>
-
+<div ui-view></div>
 
 <script src="js/app.js"></script>
 <script src="js/controller/studentInfoController.js"></script>
