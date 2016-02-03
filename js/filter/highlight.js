@@ -7,7 +7,7 @@
         //$sce: Strict Contextual Escaping
         return function (text, phrase) {
             if(!angular.isString(text)){
-                return;
+                return $sce.trustAsHtml(text.toString());
             }
 
             if (phrase) {
