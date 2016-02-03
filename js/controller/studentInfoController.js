@@ -10,16 +10,16 @@
         this.address = address || '';
     }
 
-    angular.module('app').controller('studentInfoController', ['$scope', '$window', function ($scope, $window) {
+    angular.module('app').controller('studentInfoController', ['$scope','view', '$http', function ($scope,view,$http) {
 
         $scope.init = function () {
             $scope.students = [
                 new student(1, 'Jack hu', 'A', 'new york city'),
                 new student(2, 'mike xu', 'A', 'london'),
-                new student(3, 'Jack wu', 'A', 'new york city'),
+                new student(3, 'Jack wu', 'B', 'new york city'),
                 new student(4, 'mike sui', 'A', 'london'),
-                new student(5, 'mia he', 'B', 'SF'),
-                new student(6, 'John hu', 'B', 'SF')
+                new student(5, 'mia he', 'A', 'San Francisco'),
+                new student(6, 'John hu', 'B', 'San Francisco')
             ];
 
             $scope.student = {selected: new student()};
@@ -27,7 +27,17 @@
 
             $scope.searchContent = '';
             $scope.searchText = {value: ''};
+
+            $scope.$broadcast('hello',{arg:'aa'});
         };
+
+        $scope.toDataBase =function(){
+            var url='database/save';
+            var postData = $scope.students;
+          $http.post(url,postData).then(function(){},function(){});
+        };
+
+        $scope.$on('hello',function(event,args){});
 
         $scope.edit = function (student) {
             $scope.student.selected = student;
@@ -49,11 +59,11 @@
         };
 
         $scope.view1 = function () {
-            $scope.viewUrl = 'templates/addStudent.html';
+            $scope.viewUrl = view.getView1();
         };
 
         $scope.view2 = function () {
-            $scope.viewUrl = 'templates/searchStudent.html';
+            $scope.viewUrl = view.getView2();
         }
 
     }]);

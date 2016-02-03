@@ -1,4 +1,5 @@
 (function () {
+    //IIFE
     var app = angular.module('app', ['ui.router']);
 
     app.config(function ($stateProvider, $urlRouterProvider) {
@@ -8,6 +9,9 @@
         $stateProvider.state('studentInfo',{
             url:'/studentInfo',
             templateUrl:'templates/studentInfo.html'
+        }).state('welcome',{
+            url:'/',
+            templateUrl:'templates/welcome.html'
         })
     })
 }());

@@ -8,10 +8,10 @@
             <th> Address</th>
             <th> Operation</th>
         </tr>
+        </thead>
         <tr ng-repeat="student in students | filter:searchText.value" ng-class="{'striped': $even}" ng-click="edit(student)">
-            <td ng-repeat="prop in student">{{prop | uppercase}}</td>
+            <td ng-repeat="prop in student" ng-bind-html="prop | uppercase | highlight:searchText.value" > </td>
             <td> <button class="btn btn-danger btn-sm" ng-click="remove(student)">Delete</button></td>
         </tr>
-        </thead>
     </table>
 </div>

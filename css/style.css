@@ -1,3 +1,7 @@
 .striped{
     background-color: whitesmoke;
 }
+
+.highlighted{
+    color: red;
+}
