@@ -64,6 +64,10 @@
 
         $scope.view2 = function () {
             $scope.viewUrl = view.getView2();
+        };
+
+        $scope.view3 = function(){
+            $scope.viewUrl = "templates/studentsList.html";
         }
 
     }]);

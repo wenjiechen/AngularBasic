@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="row" style="padding: 20px;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Grade</th>
+            <th> Address</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="student in students | filter:searchText.value" >
+            <td ng-repeat="prop in student" ng-bind-html="prop | uppercase | highlight:text"></td>
+        </tr>
+    </table>
+</div>
