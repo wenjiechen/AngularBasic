@@ -4,4 +4,7 @@
     </div>
 </div>
 
-<ng-include src="'templates/studentTable.html'"></ng-include>
+
+<!--<ng-include src="'templates/studentTable.html'"></ng-include>-->
+
+<stu-table students="students" filter-text="{{searchText.value}}" ></stu-table>

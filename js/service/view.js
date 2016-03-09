@@ -13,6 +13,9 @@
             },
             getView2: function () {
                 return view2;
+            },
+            getgetTableTemplate: function () {
+                return 'templates/directive/stuTableTemp.html';
             }
         }
 

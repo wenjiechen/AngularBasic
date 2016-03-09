@@ -1,0 +1,20 @@
+<div class="row" style="padding: 20px;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Grade</th>
+            <th> Address</th>
+            <th> Operation</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="student in students | filter:searchText.value" ng-class="{'striped': $even}"
+            ng-click="editStudent(student)">
+            <td ng-repeat="prop in student" ng-bind-html="prop | uppercase | highlight:searchText.value"></td>
+            <td>
+                <button class="btn btn-danger btn-sm" ng-click="removeStudent(student)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
