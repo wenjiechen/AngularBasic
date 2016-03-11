@@ -8,15 +8,20 @@
 
             templateUrl: view.getgetTableTemplate(),
 
+
             scope: {
                 students: '=',
                 filterText: '@',
-                editStudent: '='
+                editStudent: '=',
+                abc:'&'
             },
 
             link: function (scope, element, attrs) {
-                scope.$watch('filterText', function (newValue) {
 
+                //scope.$on();
+                //scope.$broadcast();
+
+                scope.$watch('filterText', function (newValue) {
                     scope.searchText = {value: newValue}
                 });
 

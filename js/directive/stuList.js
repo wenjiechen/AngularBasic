@@ -2,7 +2,7 @@
  * Created by wenjie on 3/6/16.
  */
 (function () {
-    angular.module('app').directive('stuList', function ($timeout) {
+    angular.module('app').directive('stuList', function ($timeout,$http,$q) {
         return {
             restrict: 'AE',
 
